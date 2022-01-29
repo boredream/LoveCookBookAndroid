@@ -7,15 +7,21 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.blankj.utilcode.util.StringUtils;
 import com.boredream.baseapplication.R;
 import com.boredream.baseapplication.base.BaseActivity;
 import com.boredream.baseapplication.base.BaseFragment;
+import com.boredream.baseapplication.entity.User;
 import com.boredream.baseapplication.fragment.DiaryFragment;
 import com.boredream.baseapplication.fragment.FragmentController;
 import com.boredream.baseapplication.fragment.MineFragment;
 import com.boredream.baseapplication.fragment.TheDayFragment;
 import com.boredream.baseapplication.fragment.TodoFragment;
+import com.boredream.baseapplication.utils.DialogUtils;
+import com.boredream.baseapplication.utils.UMengUtils;
+import com.boredream.baseapplication.utils.UserKeeper;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.util.ArrayList;
 
@@ -41,6 +47,7 @@ public class MainActivity extends BaseActivity {
         // 如果是退出应用flag,则直接关闭当前页面,不加载UI
         boolean exit = getIntent().getBooleanExtra("exit", false);
         if (exit) {
+            MobclickAgent.onKillProcess(this);
             finish();
             return;
         }
@@ -53,7 +60,19 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initData() {
+        UMConfigure.init(this, UMengUtils.APP_KEY, "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
+        MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
 
+        User user = UserKeeper.getSingleton().getUser();
+        MobclickAgent.onProfileSignIn(String.valueOf(user.getId()));
+
+        if (StringUtils.isEmpty(user.getBirthday()) &&
+                StringUtils.isEmpty(user.getGender()) &&
+                StringUtils.isEmpty(user.getAvatar())) {
+            // 未设置个人信息
+            DialogUtils.show2BtnDialog(this, "提醒", "您的用户信息待完善",
+                    "前往设置", v -> UserInfoActivity.start(this));
+        }
     }
 
     private void initView() {
@@ -81,7 +100,6 @@ public class MainActivity extends BaseActivity {
             showTip("再按一次退出程序");
             firstBackTime = System.currentTimeMillis();
         } else {
-            MobclickAgent.onKillProcess(this);
             exit();
         }
     }

@@ -203,7 +203,6 @@ public class LoginActivity extends BaseActivity {
 
     private void loginSuccess(User user) {
         UserKeeper.getSingleton().setUser(user);
-        UMConfigure.init(this, UMengUtils.APP_KEY, "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
         finish();
         MainActivity.start(this);
     }

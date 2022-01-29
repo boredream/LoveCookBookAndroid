@@ -4,6 +4,7 @@ package com.boredream.baseapplication.base;
 import android.app.Application;
 
 import com.blankj.utilcode.util.Utils;
+import com.boredream.baseapplication.BuildConfig;
 import com.boredream.baseapplication.utils.UMengUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
@@ -19,6 +20,12 @@ public class BaseApplication extends Application {
         super.onCreate();
         Utils.init(this);
         initRefresh();
+        initUM();
+    }
+
+    private void initUM() {
+        //设置LOG开关，默认为false
+        UMConfigure.setLogEnabled(BuildConfig.DEBUG);
         UMConfigure.preInit(this, UMengUtils.APP_KEY, UMengUtils.CHANNEL);
     }
 

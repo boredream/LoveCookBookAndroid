@@ -135,14 +135,6 @@ public class TheDayFragment extends BaseFragment implements OnSelectedListener<T
             ivRightAdd.setVisibility(View.VISIBLE);
             ivRight.setOnClickListener(v -> InviteCpActivity.start(activity));
         }
-
-        if (StringUtils.isEmpty(user.getBirthday()) &&
-                StringUtils.isEmpty(user.getGender()) &&
-                StringUtils.isEmpty(user.getAvatar())) {
-            // 未设置个人信息
-            DialogUtils.show2BtnDialog(activity, "提醒", "您的用户信息待完善",
-                    "前往设置", v -> UserInfoActivity.start(activity));
-        }
     }
 
     private void setTogetherDays() {

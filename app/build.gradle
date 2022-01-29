@@ -99,8 +99,9 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
 
     // umeng
-    implementation  'com.umeng.umsdk:common:9.4.2'// 必选
-    implementation  'com.umeng.umsdk:asms:1.4.0'// 必选
+    implementation  'com.umeng.umsdk:common:9.4.4'// 必选
+    implementation  'com.umeng.umsdk:asms:1.4.1'// 必选
+    implementation 'com.umeng.umsdk:apm:1.5.2' // 错误分析升级为独立SDK，看crash数据请一定集成，可选
     implementation  'com.umeng.umsdk:abtest:1.0.0'//使用U-App中ABTest能力，可选
 
     // others

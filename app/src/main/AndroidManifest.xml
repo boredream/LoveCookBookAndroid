@@ -32,8 +32,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="um.5fd7093c498d9e0d4d8cfa80" />
             </intent-filter>
         </activity>
         <activity
