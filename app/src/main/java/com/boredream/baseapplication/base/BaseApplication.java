@@ -4,10 +4,12 @@ package com.boredream.baseapplication.base;
 import android.app.Application;
 
 import com.blankj.utilcode.util.Utils;
+import com.boredream.baseapplication.utils.UMengUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.umeng.commonsdk.UMConfigure;
 
 
 public class BaseApplication extends Application {
@@ -17,6 +19,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         Utils.init(this);
         initRefresh();
+        UMConfigure.preInit(this, UMengUtils.APP_KEY, UMengUtils.CHANNEL);
     }
 
     private void initRefresh() {

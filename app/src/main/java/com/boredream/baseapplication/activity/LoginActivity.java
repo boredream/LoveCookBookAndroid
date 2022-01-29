@@ -24,8 +24,10 @@ import com.boredream.baseapplication.net.HttpRequest;
 import com.boredream.baseapplication.net.RxComposer;
 import com.boredream.baseapplication.net.SimpleObserver;
 import com.boredream.baseapplication.utils.TokenKeeper;
+import com.boredream.baseapplication.utils.UMengUtils;
 import com.boredream.baseapplication.utils.UserKeeper;
 import com.boredream.baseapplication.view.EditTextWithClear;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -201,6 +203,7 @@ public class LoginActivity extends BaseActivity {
 
     private void loginSuccess(User user) {
         UserKeeper.getSingleton().setUser(user);
+        UMConfigure.init(this, UMengUtils.APP_KEY, "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
         finish();
         MainActivity.start(this);
     }
