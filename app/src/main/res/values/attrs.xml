@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="DialogTitle">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="EditTextWithClear">
+        <attr name="hint" format="string" />
+        <attr name="text" format="string" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingItemView">
+        <attr name="level" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="small" value="1" />
+        </attr>
+        <attr name="icon" format="reference" />
+        <attr name="name" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="showRightArrow" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

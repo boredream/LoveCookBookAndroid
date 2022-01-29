@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_bottom_dialog"
+    android:orientation="vertical">
+
+    <com.boredream.baseapplication.view.DialogTitle
+        android:id="@+id/bottom_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </com.boredream.baseapplication.view.DialogTitle>
+
+    <com.boredream.baseapplication.view.WheelView
+        android:id="@+id/bottom_dialog_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+    </com.boredream.baseapplication.view.WheelView>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/ButtonPrimary"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="确定">
+
+    </Button>
+
+</LinearLayout>

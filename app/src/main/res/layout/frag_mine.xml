@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ll_header"
+        android:layout_alignBottom="@id/ll_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/oval_white"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="李斯文"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ID:888888"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_caption" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_items"
+        style="@style/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_header">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btn_logout"
+        style="@style/ButtonPrimary"
+        android:layout_below="@id/rv_items"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="44dp"
+        android:text="退出登录" />
+
+</RelativeLayout>

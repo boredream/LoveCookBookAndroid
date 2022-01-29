@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">恋爱手册</string>
+    <string name="dialog_positive">确定</string>
+    <string name="dialog_negative">取消</string>
+</resources>

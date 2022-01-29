@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.boredream.baseapplication.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@null"
+                android:maxLength="500"
+                android:hint="记录你想说的内容..."
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="@dimen/margin_medium"
+                android:textColor="@color/txt_gray"
+                android:textColorHint="@color/txt_light_gray"
+                android:textSize="@dimen/txt_body" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:background="@color/divider_gray" />
+
+            <com.boredream.baseapplication.view.SettingItemView
+                android:id="@+id/siv_date"
+                style="@style/SettingItemViewEdit"
+                app:name="日期" />
+
+            <com.boredream.baseapplication.view.ImageGridView
+                android:id="@+id/igv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="15dp" />
+
+            <Button
+                android:id="@+id/btn_commit"
+                style="@style/ButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="92dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="添加" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

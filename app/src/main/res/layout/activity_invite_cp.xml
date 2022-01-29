@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.boredream.baseapplication.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:text="邀请你的另一半即可开通"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/txt_body" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginRight="-8dp"
+        android:background="@drawable/bg_invite_card"
+        android:padding="38dp">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            android:text="我的专属邀请码"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/txt_subhead" />
+
+        <TextView
+            android:id="@+id/tv_invite_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="000000"
+            android:textColor="@color/txt_black"
+            android:textSize="36dp" />
+
+        <ImageView
+            android:id="@+id/iv_copy"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_invite_code"
+            android:layout_alignBottom="@id/tv_invite_code"
+            android:layout_toRightOf="@id/tv_invite_code"
+            android:scaleType="center"
+            android:src="@drawable/ic_copy" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_invite_code"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#26999999" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:src="@drawable/ic_love_alpha" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#26999999" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cp_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="需要另一半已注册"
+            android:textColor="@color/txt_gray"
+            android:textSize="@dimen/txt_subhead" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cp_status"
+            android:layout_marginLeft="@dimen/margin_tiny"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/margin_tiny"
+            android:background="@drawable/shadow_cirrect_12pri_y2b12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_cp_invite_code"
+                    style="@style/EditTextSingleLine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:hint="填写TA的邀请码"
+                    android:textSize="@dimen/txt_subhead" />
+
+                <Button
+                    android:id="@+id/btn_commit"
+                    style="@style/ButtonPrimary"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="6dp"
+                    android:alpha="0.65"
+                    android:text="开通" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

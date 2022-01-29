@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="490dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_bottom_dialog">
+
+    <com.boredream.baseapplication.view.DialogTitle
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="选择日期">
+
+    </com.boredream.baseapplication.view.DialogTitle>
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_below="@id/dialog_title"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/ButtonPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="确定">
+
+    </Button>
+
+</RelativeLayout>

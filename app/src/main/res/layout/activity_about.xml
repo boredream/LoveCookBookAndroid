@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.boredream.baseapplication.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="64dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/app_name"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/txt_title" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/txt_body" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        style="@style/TextViewLinesContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="恋爱手册是一款专为恋人、情侣、夫妻使用的工具型记录软件。设计界面简洁，减少了很多花哨的游戏功能，为情侣提供纪念日、恋爱日记、愿望清单等多种功能，让情侣用户不论何时何地都能浏览一路走来的各种历程，见证情侣浪漫爱情。" />
+</LinearLayout>

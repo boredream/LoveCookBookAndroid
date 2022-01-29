@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.boredream.baseapplication.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/title_bar"
+        android:background="#40FB6565"
+        android:gravity="center"
+        android:text="已打卡0/30次"
+        android:textColor="@color/txt_black"
+        android:textSize="@dimen/txt_body" />
+
+    <com.boredream.baseapplication.view.loading.RefreshListLayout
+        android:id="@+id/rll_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_progress" />
+
+</RelativeLayout>

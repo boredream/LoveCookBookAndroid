@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="36dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_padding" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_username" />
+
+        <com.boredream.baseapplication.view.EditTextWithClear
+            android:id="@+id/etwc_username"
+            style="@style/EditTextSingleLine"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            app:hint="请输入您的手机号"
+            app:textSize="@dimen/txt_subhead" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:padding="2dp"
+            android:src="@drawable/ic_verify_code" />
+
+        <com.boredream.baseapplication.view.EditTextWithClear
+            android:id="@+id/etwc_verify_code"
+            style="@style/EditTextSingleLine"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_weight="1"
+            app:hint="请输入验证码"
+            app:textSize="@dimen/txt_subhead" />
+
+        <TextView
+            android:id="@+id/tv_send_verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_small"
+            android:text="获取验证码"
+            android:textColor="@color/txt_black2unable_sel"
+            android:textSize="@dimen/txt_subhead" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_password" />
+
+        <com.boredream.baseapplication.view.EditTextWithClear
+            android:id="@+id/etwc_password"
+            style="@style/EditTextSingleLine"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            app:hint="请输入您的密码"
+            app:textSize="@dimen/txt_subhead" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray" />
+
+    <TextView
+        android:id="@+id/tv_change_login"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0.6"
+        android:gravity="center"
+        android:paddingRight="@dimen/margin_small"
+        android:text="手机验证码登录"
+        android:textColor="@color/red"
+        android:textSize="@dimen/txt_body" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ButtonPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:text="登录" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="没有账号？直接输入账号密码即可完成注册"
+        android:textColor="@color/txt_light_gray"
+        android:textSize="@dimen/txt_caption"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录即表示同意"
+            android:textColor="@color/txt_light_gray"
+            android:textSize="@dimen/txt_caption" />
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户协议》"
+            android:textColor="@color/txt_40primary"
+            android:textSize="@dimen/txt_caption" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="和"
+            android:textColor="@color/txt_light_gray"
+            android:textSize="@dimen/txt_caption" />
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《隐私政策》"
+            android:textColor="@color/txt_40primary"
+            android:textSize="@dimen/txt_caption" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未注册手机号验证后自动创建恋爱手册账号"
+        android:visibility="gone"
+        android:textColor="@color/txt_light_gray"
+        android:textSize="@dimen/txt_caption" />
+
+</LinearLayout>

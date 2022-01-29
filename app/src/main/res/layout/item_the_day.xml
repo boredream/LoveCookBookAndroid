@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-20dp"
+    android:background="@drawable/shadow_correct_12pri_y2b12">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewSubhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一次相识" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/TextViewBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:text="2020/02/14（周一）"
+            android:textColor="@color/txt_light_gray" />
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/TextViewBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_date"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/margin_tiny"
+            android:text="天" />
+
+        <TextView
+            android:id="@+id/tv_day_count"
+            style="@style/TextViewDigital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv"
+            android:layout_marginRight="@dimen/margin_tiny"
+            android:layout_toLeftOf="@id/tv"
+            android:text="36"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_display2" />
+
+        <TextView
+            android:id="@+id/tv_notify_type"
+            style="@style/TextViewBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_day_count"
+            android:layout_marginRight="@dimen/margin_tiny"
+            android:layout_toLeftOf="@id/tv_day_count"
+            android:paddingBottom="@dimen/margin_tiny"
+            android:text="还有" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add_the_day"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>

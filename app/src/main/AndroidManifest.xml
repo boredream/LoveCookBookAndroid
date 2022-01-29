@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boredream.baseapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.file.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker_file_provider" />
+        </provider>
+
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SetPasswordActivity" />
+        <activity android:name=".activity.ImageBrowserActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.EditTextActivity" />
+        <activity android:name=".activity.TheDayEditActivity" />
+        <activity android:name=".activity.DiaryEditActivity" />
+        <activity android:name=".activity.TodoEditActivity" />
+        <activity android:name=".activity.InviteCpActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.FeedBackActivity" />
+        <activity android:name=".activity.SettingActivity" />
+    </application>
+
+</manifest>
